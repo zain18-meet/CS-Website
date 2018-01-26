@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Portfolio</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/stylesheet') }}">
+
+  	<script src="{{ url_for('static', filename='') }}"></script>
+  	<script src="{{ url_for('static', filename='') }}"></script>
+  	<script src="{{ url_for('static', filename='') }}"></script>
+</head>
+
+<body>
+
+	<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="/home" class="w3-bar-item w3-button"><b>ZAIN</b> Art</a>
+    <div class="w3-right w3-hide-small">
+      <a href="/portfolio" class="w3-bar-item w3-button">Portfolio</a>
+      <a href="/submit" class="w3-bar-item w3-button">Submit</a>
+      <a href="/about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+	</div>
+
+	<div> 
+    	<h3 class="w3-text-black">{{post.title}}</h3>
+		<div class="w3-display-container w3-content w3-wide" style="max-width:1500px;">
+    		<img class="w3-image" src="{{post.img}}" width=500 height=265 ><br><br>
+		</div>
+	</div>
+
+</body>
+
+</html>

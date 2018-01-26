@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Submit</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/stylesheet') }}">
+
+  	<script src="{{ url_for('static', filename='') }}"></script>
+  	<script src="{{ url_for('static', filename='') }}"></script>
+  	<script src="{{ url_for('static', filename='') }}"></script>
+</head>
+
+<body>
+
+	<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="/home" class="w3-bar-item w3-button"><b>ZAIN</b> Art</a>
+    <div class="w3-right w3-hide-small">
+      <a href="/portfolio" class="w3-bar-item w3-button">Portfolio</a>
+      <a href="/submit" class="w3-bar-item w3-button">Submit</a>
+      <a href="/about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</div>
+
+  <div class="w3-container w3-padding-32" id="submit">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Adding Artwork</h3>
+    <p>Write title of Artwork and add image url</p>
+    <form action="{{url_for('submit')}}" method=post >
+      <input type="text" placeholder="Title" required name="title">
+      <input type="text" placeholder="Image Url" required name="img">
+      <button class="w3-button w3-black w3-section" type="submit" value="submit">
+        <i class="fa fa-paper-plane"></i> SUBMIT
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>
