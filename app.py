@@ -17,7 +17,7 @@ session = DBSession()
 
 @app.route('/home')
 def home():
-	return render_template('main_page.html')
+	return render_template('home.html')
 
 @app.route('/about')
 def about():
