@@ -1,4 +1,4 @@
-import datetime 
+import datetime
 
 from flask_login import UserMixin
 
@@ -16,8 +16,9 @@ class Post(Base):
     title = Column(String)
     img = Column(String)
     created_at = Column(DateTime, default=datetime.datetime.now())
-    description = Column(String)
 
     def __repr__(self):
         return "<Post: %s, title: %s" % (
             self.id, self.title)
+
+
