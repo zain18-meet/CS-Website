@@ -25,6 +25,16 @@ def post():
 	img= request.form('img')
 	created_at= request.form('created_at')
 
+	if request.method=='GET':
+			return render_template('add_post.html')
+		else:
+			post = Post(title=request.form.get("title"), img=request.form.get("img"), 
+			created_at= request.form.get('created_at'))
+			print("adding post")	
+			session.add(post)
+			session.commit()
+			return redirect('/portfolio.html')
+
 
 
 
