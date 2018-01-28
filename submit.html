@@ -15,11 +15,11 @@
 
   <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="home.html" class="w3-bar-item w3-button"><b>Z-</b>Art</a>
+    <a href="/home.html" class="w3-bar-item w3-button"><b>Z-</b>Art</a>
     <div class="w3-right">
-      <a href="portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
-      <a href="submit.html" class="w3-bar-item w3-button">Submit</a>
-      <a href="about.html" class="w3-bar-item w3-button">About</a>
+      <a href="/portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
+      <a href="/submit.html" class="w3-bar-item w3-button">Submit</a>
+      <a href="/about.html" class="w3-bar-item w3-button">About</a>
     </div>
   </div>
 </div>
@@ -30,7 +30,7 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Adding Artwork</h3> 
     <p>Write title of Artwork and add image url</p><br>
 
-    <form action="{{ url_for('submit') }}" method="post" >
+    <form action="{{ url_for('post') }}" method="post" >
       <input class="w3-input w3-section" type="text" placeholder="Title" required name="title"><br>
       <input class="w3-input w3-section" type="text" placeholder="Image Url" required name="img"><br>
       <button class="w3-button w3-black w3-section" type="submit" value="submit">

@@ -20,7 +20,7 @@ db = SQLAlchemy(app)
 ###### ROUTES ######
 
 @app.route('/submit.html', methods=['POST'])
-def submit():
+def post():
 	title= requets.form('title')
 	img= request.form('img')
 	created_at= request.form('created_at')
