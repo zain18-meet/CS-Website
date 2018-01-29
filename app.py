@@ -19,17 +19,30 @@ db = SQLAlchemy(app)
 
 ###### ROUTES ######
 
-@app.route('/submit.html', methods=['POST'])
+
+@app.route('/')
+def home():
+	return render_template('home.html')
+
+@app.route('/portfolio')
+def portfolio():
+	return render_template('portfolio.html')
+
+@app.route('/about')
+def about():
+	return render_template('about.html')
+
+@app.route('/submit', methods=['GET','POST'])
 def post():
-	title= requets.form('title')
-	img= request.form('img')
-	created_at= request.form('created_at')
+	title= requets.form['title']
+	img= request.form['img']
+	created_at= request.form['created_at']
 
 	if request.method=='GET':
-			return render_template('add_post.html')
+			return render_template('submit.html')
 		else:
 			post = Post(title=request.form.get("title"), img=request.form.get("img"), 
-			created_at= request.form.get('created_at'))
+			created_at= request.form.get('created_at')
 			print("adding post")	
 			session.add(post)
 			session.commit()
