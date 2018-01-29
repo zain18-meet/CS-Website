@@ -42,11 +42,11 @@ def post():
 			return render_template('submit.html')
 		else:
 			post = Post(title=request.form.get("title"), img=request.form.get("img"), 
-			created_at= request.form.get('created_at')
+			created_at= request.form.get('created_at'))
 			print("adding post")	
 			session.add(post)
 			session.commit()
-			return redirect('/portfolio.html')
+			return redirect('portfolio.html')
 
 
 
