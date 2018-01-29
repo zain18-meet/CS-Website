@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Main Page - ZAIN ART</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+  <div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="/home" class="w3-bar-item w3-button"><b>Z-</b>Art</a>
+    <div class="w3-right">
+      <a href="/portfolio" class="w3-bar-item w3-button">Portfolio</a>
+      <a href="/submit" class="w3-bar-item w3-button">Submit</a>
+      <a href="/about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</div>
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;">
+	  <img class="slides" src="https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/27024291_2242972325734311_2013753142801075240_o.jpg?oh=fb3c5b9e3a3e792378f2d6f63b85a4ff&oe=5AE81D29" style="width:100%">
+	  <img class="slides" src="https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/27173184_2242972019067675_4934933133302241726_o.jpg?oh=80c0572ddedbd1ff711e50118683c391&oe=5ADC6F40" style="width:100%"">
+	  <img class="slides" src="https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/27021707_2242972055734338_4063989391269639201_o.jpg?oh=942b1f429cee64bd41d8a6c019999fb6&oe=5B23B5A7" style="width:100%"">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Z</b></span> <span class="w3-hide-small w3-text-white">Art</span></h1>
+  </div>
+</header>
+
+<br><br><br><br><br>
+
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+<h3 class="w3-padding-64">HEY!</h3>
+<p> My name is Zain Al Qalawi, this is my Art portfolio website. Please feel free to check it out!</p>
+</div>
+</div>
+
+
+	<script>
+	var myIndex = 0;
+	slideshow();
+
+	function slideshow() {
+	    var i;
+	    var x = document.getElementsByClassName("slides");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";  
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}    
+	    x[myIndex-1].style.display = "block";  
+	    setTimeout(slideshow, 3000);
+	}
+	</script>
+
+<br><br><br><br><br>
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://id.heroku.com/login" title="Heroku" target="_blank">Heroku</a></p>
+</footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
