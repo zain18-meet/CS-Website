@@ -24,8 +24,8 @@ def home():
 
 @app.route('/portfolio')
 def portfolio():
-	return render_template('portfolio.html', title=request.form.get("title"), img=request.form.get("img"), 
-		created_at= request.form.get('created_at'))
+	return render_template('portfolio.html', title=request.form.get["title"], img=request.form.get["img"], 
+		created_at= request.form.get['created_at'])
 
 @app.route('/about')
 def about():
@@ -36,8 +36,8 @@ def submit():
 	if request.method=='GET':
 		return render_template('submit.html')
 	else:
-		post = Post(title=request.form.get("title"), img=request.form.get("img"), 
-		created_at= request.form.get('created_at'))
+		post = Post(title=request.form.get["title"], img=request.form.get["img"], 
+		created_at= request.form.get['created_at'])
 		print("adding post")	
 		session.add(post)
 		session.commit()
