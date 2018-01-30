@@ -24,9 +24,8 @@ def home():
 
 @app.route('/portfolio')
 def portfolio():
-	return render_template('portfolio.html', title=request.form.get["title"], img=request.form.get["img"], 
-		created_at= request.form.get['created_at'])
-
+	return render_template('portfolio.html')
+	
 @app.route('/about')
 def about():
 	return render_template('about.html')
