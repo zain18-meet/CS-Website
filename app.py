@@ -15,6 +15,8 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 db = SQLAlchemy(app)
 
+db.create_all()
+
 ###### ROUTES ######
 
 
@@ -32,15 +34,15 @@ def submit():
 		return render_template('submit.html')
 	else:
 		post = Post(title=request.form.get("title"), img=request.form.get("img"), 
-		created_at= request.form.get('created_at'))
-		print("adding post")	
-		session.add(post)
-		session.commit()
-		return redirect('/portfolio')
+		created_at= request.form.get('created_at'))	
+		db.session.add(post)
+		db.session.commit()
+		return render_template('portfolio.htm' , posts=posts)
 
 @app.route('/portfolio')
 def portfolio():
-	return render_template('portfolio.html')
+	posts = db.session.query(Post).all()
+	return render_template('portfolio.html', posts=posts)
 
 
 
