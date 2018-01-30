@@ -1,11 +1,7 @@
 import datetime
 
-from flask_login import UserMixin
-
 from sqlalchemy import Column, DateTime, Integer, String, Boolean
 from sqlalchemy.ext.declarative import declarative_base
-
-from werkzeug.security import generate_password_hash, check_password_hash
 
 Base = declarative_base()
 
