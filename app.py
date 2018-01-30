@@ -22,10 +22,6 @@ db = SQLAlchemy(app)
 def home():
 	return render_template('home.html')
 
-@app.route('/portfolio')
-def portfolio():
-	return render_template('portfolio.html')
-
 @app.route('/about')
 def about():
 	return render_template('about.html')
@@ -41,6 +37,10 @@ def submit():
 		session.add(post)
 		session.commit()
 		return redirect('/portfolio')
+
+@app.route('/portfolio')
+def portfolio():
+	return render_template('portfolio.html')
 
 
 
